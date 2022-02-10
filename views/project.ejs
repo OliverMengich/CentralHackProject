@@ -1,0 +1,85 @@
+<%- include('./includes/head.ejs') %>
+<link rel="stylesheet" href="projects.css">
+<link rel="stylesheet" href="join-us.css">
+<style>
+    .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: relative;
+            top: -35px;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+</style>
+</head>
+<body>
+    <div class="hero">
+        <%- include('./includes/navigation.ejs') %>
+        <div class="container" id="window" style="display: none;">
+            <form action="/finance" method="POST">
+                <span class="close">&times;</span>
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" name="fullname" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Amount</span>
+                        <input name="amount" type="number" placeholder="Enter amount" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Enter Reason</span>
+                        <input type="text" name="reason" placeholder="Enter reason" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Date Required</span>
+                        <input type="text" name="date" placeholder="enter date" required>
+                    </div>
+                </div>
+                <button class="button" type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="banner-title">
+            <h2 style="font-family: 'Lobster', cursive;">Active Projects</h2>
+            <div style="display: flex;">
+                <div class="insureBox" id="insureb">
+                    <h3 id="name1"><%= proj.name %></h3>
+                    <h4 id="desc1"><%= proj.description %></h4>
+                    <h3 id="amount1"><%=proj.amount %></h3>
+                    <h5 id="votes1"><%= proj.votes %></h5>
+                </div> 
+            </div>
+        </div>
+        <div class="vertical-bar" id="vertical-bar">
+            <div class="search-icons">
+                <img class="fa" id="list" src="list.png">
+                <img class="fa" src="magnifying-glass.png">
+            </div>
+            <div class="social-icons">
+                <a href="https://facebook.com"><img class="fa fa-facebook" src="facebook.png"></a>
+                <a href="https://instagram.com"><img class="fa fa-instagram" src="instagram.png"></a>
+                <a href="https://twitter.com"><img class="fa fa-twitter" src="twitter.png"></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        //1. get the close, modal and button
+        var span = document.getElementsByClassName("close")[0];
+        var btn = document.getElementById("btClick");
+        var modal = document.getElementById("window");
+        // 2.toggle the modal window with it
+        btn.onclick = function(){
+            modal.style.display="block";
+        }
+        span.onclick = function(){
+            modal.style.display="none";
+        }
+    </script>
+</body>
+</html>

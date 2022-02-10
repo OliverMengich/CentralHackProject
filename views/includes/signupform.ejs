@@ -1,0 +1,24 @@
+<div class="container" id="window" style="display: none;">
+    <form action="/finance" method="POST">
+        <span class="close">&times;</span>
+        <div class="user-details">
+            <div class="input-box">
+                <span class="details">Full Name</span>
+                <input type="text" name="fullname" placeholder="Enter your name" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Amount</span>
+                <input name="amount" type="number" placeholder="Enter amount" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Enter Reason</span>
+                <input type="text" name="reason" placeholder="Enter reason" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Date Required</span>
+                <input type="text" name="date" placeholder="enter date" required>
+            </div>
+        </div>
+        <button class="button" type="submit">Submit</button>
+    </form>
+</div>

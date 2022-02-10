@@ -1,0 +1,77 @@
+<%- include('./includes/head.ejs') %>
+<link rel="stylesheet" href="join-us.css">
+</head>
+<body>
+    <div class="hero">
+        <%- include('./includes/navigation.ejs') %>
+        <div class="container">
+            <div class="title">Registration</div>
+            <form action="#" method="POST">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" name="fullname" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Age</span>
+                        <input type="number" name="age" placeholder="Enter your Age" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">ID Number</span>
+                        <input name="idnumber" type="number" placeholder="Enter your National ID Number" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Phone Number</span>
+                        <input type="text" name="phonenumber" placeholder="Enter your number" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Password</span>
+                        <input type="text" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Confirm Password</span>
+                        <input type="text" name="confirmpassword" placeholder="confirm password" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Occupation</span>
+                        <input type="text" name="occupation" placeholder="enter your occupation" required>
+                    </div>
+                    <div class="gender-details">
+                        <input type="radio" name="gender" id="dot-1">
+                        <input type="radio" name="gender" id="dot-2">
+                        <input type="radio" name="gender" id="dot-3">
+                        <span class="gender-title">Gender</span>
+                        <div class="category">
+                            <label for="dot-1">
+                                <span class="dot one"></span>
+                                <span class="gender">Male</span>
+                            </label>
+                            <label for="dot-2">
+                                <span class="dot two"></span>
+                                <span class="gender">Female</span>
+                            </label>
+                            <label for="dot-3">
+                                <span class="dot three"></span>
+                                <span class="gender">Prefer not to say</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                </div>
+                <button class="button" type="submit">Register</button>
+            </form>
+        </div>
+        <div class="vertical-bar">
+            <div class="search-icons">
+                <img class="fa" id="list" src="list.png">
+                <img class="fa" src="magnifying-glass.png">
+            </div>
+            <div class="social-icons">
+                <a href="https://facebook.com"><img class="fa fa-facebook" src="facebook.png"></a>
+                <a href="https://instagram.com"><img class="fa fa-instagram" src="instagram.png"></a>
+                <a href="https://twitter.com"><img class="fa fa-twitter" src="twitter.png"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
